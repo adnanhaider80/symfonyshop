@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shop!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for product in products%}
+            <div class="col-md-3 mt-3">
+                <div class="card"> 
+                    <img class="card-img-top" src="https://via.placeholder.com/150">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div class="d-flex flex-column">
+                                <div class="h6 font-weight-bold">{{product.title}}</div>
+                                <div class="text-muted">${{product.price}}</div>
+                            </div>
+                            <button class="btn btn-success btn-sm buy_now" data-id="{{product.id}}">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor%}
+    </div>
+</div>
+
+{% endblock %}
