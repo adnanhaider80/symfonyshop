@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BasketController extends AbstractController
 {
     /**
-    * @Route("/")
+    * @Route("/kl")
     */
     public function number(): Response
     {
